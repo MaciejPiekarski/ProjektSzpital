@@ -22,8 +22,8 @@ public class MySQLDiseaseDao extends MySQLDaoBase<Disease> implements DiseaseDao
 
 	@Override
 	protected String getInsertQuery() {
-		return "INSERT INTO `" + getTableName() + "`(`id`,`name`,`medicine_id`)"
-				+ " VALUES('',?,?)";
+		return "INSERT INTO `" + getTableName() + "`(`name`,`medicine_id`)"
+				+ " VALUES(?,?)";
 	}
 
 	@Override

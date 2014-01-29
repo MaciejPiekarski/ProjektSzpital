@@ -17,7 +17,7 @@ public class MySQLUnitOfWork implements UnitOfWork {
 		connection = getConnection();
 	}
 
-	protected Connection getConnection() {
+	public Connection getConnection() {
 		try {
 			if (connection == null || connection.isClosed())
 				connection = DriverManager

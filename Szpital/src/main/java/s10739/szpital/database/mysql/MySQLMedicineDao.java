@@ -23,8 +23,8 @@ public class MySQLMedicineDao extends MySQLDaoBase<Medicine> implements
 
 	@Override
 	protected String getInsertQuery() {
-		return "INSERT INTO `" + getTableName() + "`(`id`,`name`)"
-				+ " VALUES('',?)";
+		return "INSERT INTO `" + getTableName() + "`(`name`)"
+				+ " VALUES(?)";
 	}
 
 	@Override

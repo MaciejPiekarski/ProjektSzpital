@@ -41,8 +41,8 @@ public class MySQLPatientDao extends MySQLDaoBase<Patient> implements
 
 	@Override
 	protected String getInsertQuery() {
-		return "INSERT INTO `" + getTableName() + "`(`id`,`name`,`surname`,`disease_id`,`doctor_id`)"
-				+ " VALUES('',?,?,?,?)";
+		return "INSERT INTO `" + getTableName() + "`(`name`,`surname`,`disease_id`,`doctor_id`)"
+				+ " VALUES(?,?,?,?)";
 	}
 
 	@Override

@@ -22,8 +22,8 @@ public class MySQLDoctorDao extends MySQLDaoBase<Doctor> implements DoctorDao {
 
 	@Override
 	protected String getInsertQuery() {
-		return "INSERT INTO `" + getTableName() + "`(`id`,`name`,`surname`)"
-				+ " VALUES('',?,?)";
+		return "INSERT INTO `" + getTableName() + "`(`name`,`surname`)"
+				+ " VALUES(?,?)";
 	}
 
 	@Override
