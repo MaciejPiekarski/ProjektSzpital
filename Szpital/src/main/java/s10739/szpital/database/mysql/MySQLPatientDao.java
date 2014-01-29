@@ -49,9 +49,9 @@ public class MySQLPatientDao extends MySQLDaoBase<Patient> implements
 	protected String getCreateQuery() {
 		return "CREATE TABLE `" + getTableName() + "`("
 				+ "`id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,"
-				+ "`name` varchar(50)"
-				+ "`surname` varchar(50)"
-				+ "`disease_id` int"
+				+ "`name` varchar(50),"
+				+ "`surname` varchar(50),"
+				+ "`disease_id` int,"
 				+ "`doctor_id` int"
 				+ ")";
 	}
