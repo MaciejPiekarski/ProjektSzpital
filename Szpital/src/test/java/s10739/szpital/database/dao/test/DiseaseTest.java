@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,7 +30,7 @@ public class DiseaseTest {
 		Disease disease = new Disease();
 		disease.setId(1);
 		disease.setName("Grypa");
-		// TODO disease.setMedicineId();
+		
 		try {
 			mySqlUnitOfWork = new MySQLUnitOfWork();
 			mySqlDiseaseDao = new MySQLDiseaseDao(mySqlUnitOfWork);
@@ -44,7 +43,6 @@ public class DiseaseTest {
 			drop = mySqlUnitOfWork.getConnection().createStatement();
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -59,19 +57,5 @@ public class DiseaseTest {
 		assertNull("Zwrócono obiekt mimo, ¿e nie powinno go byæ bazie",d2);
 		assertEquals("Grypa", d1.getName());
 		assertNotSame(d1,d3);
-	}
-	
-	@After
-	public void teardown()
-	{
-		try
-		{
-				drop.executeUpdate("drop table disease");
-				drop.executeUpdate("drop table medicine");
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
 	}
 }
