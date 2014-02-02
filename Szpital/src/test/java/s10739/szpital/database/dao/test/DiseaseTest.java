@@ -30,6 +30,7 @@ public class DiseaseTest {
 		Disease disease = new Disease();
 		disease.setId(1);
 		disease.setName("Grypa");
+		disease.setMedicineId(medicine.getId());
 		
 		try {
 			mySqlUnitOfWork = new MySQLUnitOfWork();
